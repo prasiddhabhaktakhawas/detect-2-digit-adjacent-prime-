@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class second{
+	public static void main(String [] args) {
+		Scanner keyboardInput = new Scanner(System.in);
+		System.out.println("enter number");
+		int num = keyboardInput.nextInt();
+		keyboardInput.close();
+		int rem,rr,r, count=0,c,units;
+		units = 100;
+		while(num!=0) {
+			rem = num % units;
+			r = rem;
+			c = 0;
+			while(r!=0) {
+				r=r/10;
+				c++;
+			}
+			if(c==2) {
+				if(prime(rem)==1) {
+					count++;
+				}
+			}
+			num/=10;
+		}
+		System.out.println("number of prime number is: " + count);
+		
+		}
+	public static int prime(int num) {
+		int i,count=0;
+		for(i=1;i<num;i++) {
+			if(num%i==0) {
+				count++;
+			}
+		}
+			return count;
+	}
+	
+}
