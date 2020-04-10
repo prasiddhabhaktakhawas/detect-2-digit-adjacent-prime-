@@ -13,7 +13,6 @@ public class second{
 			r = rem;
 			c = 0;
 			while(r!=0) {
-				rr=r%10;
 				r=r/10;
 				c++;
 			}
@@ -22,7 +21,7 @@ public class second{
 					count++;
 				}
 			}
-			num=(num-(rem%10))/10;
+			num/=10;
 		}
 		System.out.println("number of prime number is: " + count);
 		
